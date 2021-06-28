@@ -71,8 +71,7 @@ public class Candy {
                         : (ratings[i] < ratings[i-1] ? -1: 0);
 
                 // Dividing Mountains
-                //
-                // Divide Mountain on three conditions \/ || \_ || /--
+                //Divide Mountain on three conditions \/ || \_ || /--
                 if((prevSlope < 0 && currSlope >= 0) || (prevSlope > 0 && currSlope == 0)) {
                     candies = candies + sum(up) + sum(down) + Math.max(up, down);
                     up = 0;
