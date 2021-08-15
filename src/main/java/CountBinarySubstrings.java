@@ -18,6 +18,8 @@ public class CountBinarySubstrings {
     }
 
     static class Solution {
+        // Time: O(N)
+        // Space: O(1)
         public static int countBinarySubstrings(String s) {
             int count = 0, i = 1, prev = 0, curr = 1;
             while(i < s.length()) {
