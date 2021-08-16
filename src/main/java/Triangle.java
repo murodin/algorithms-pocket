@@ -56,6 +56,8 @@ public class Triangle {
     }
 
     static class Solution {
+        // Time: O(N^2)
+        // Space: O(1)
         public static int minimumTotal(List<List<Integer>> triangle) {
             for(int i = 1; i < triangle.size(); i++) {
                 for(int j = 0; j < triangle.get(i).size(); j++){
@@ -77,6 +79,8 @@ public class Triangle {
             return Collections.min(triangle.get(triangle.size()-1));
         }
 
+        // Time: O(N^2)
+        // Space: O(1)
         public static int minimumTotal_II(List<List<Integer>> triangle) {
             for(int i = triangle.size()-2; i >= 0; i--) {
                 for(int j = 0; j < triangle.get(i).size(); j++) {
