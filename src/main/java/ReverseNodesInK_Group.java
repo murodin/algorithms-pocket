@@ -12,12 +12,11 @@ public class ReverseNodesInK_Group {
      */
 
     public static void main(String[] args) {
-        ListNode head = new ListNode(1);
-        ListNode n1 = new ListNode(2, head);
-        ListNode n2 = new ListNode(3, n1);
-        ListNode n3 = new ListNode(4, n2);
-        ListNode n4 = new ListNode(5, n3);
-
+        ListNode n4 = new ListNode(5);
+        ListNode n3 = new ListNode(4, n4);
+        ListNode n2 = new ListNode(3, n3);
+        ListNode n1 = new ListNode(2, n2);
+        ListNode head = new ListNode(1, n1);
         System.out.println("Reverse Single Linked List: " + Solution.reverseKGroup(head, 2));
 
     }
@@ -31,6 +30,8 @@ public class ReverseNodesInK_Group {
     }
 
     static class Solution {
+        // Time: O(N)
+        // Space: O(1)
         public static ListNode reverseKGroup(ListNode head, int k) {
             int count =0;
             ListNode dummy = new ListNode();
@@ -42,6 +43,7 @@ public class ReverseNodesInK_Group {
                 temp = temp.next;
                 count++;
             }
+            System.out.println("Count:" + count);
             temp = dummy;
             while(temp.next!=null){
                 if(count<k) break;
@@ -51,6 +53,7 @@ public class ReverseNodesInK_Group {
                 ListNode second = first.next;
 
                 while(nodes-- > 0){
+                    System.out.println("Nodes: " + nodes);
                     ListNode next = second.next;
                     second.next = first;
                     first = second;
