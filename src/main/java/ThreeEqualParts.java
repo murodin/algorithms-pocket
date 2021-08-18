@@ -59,7 +59,6 @@ public class ThreeEqualParts {
             }
 
             //Compare 3 partitions
-
             /*
             //O(N) Space Solution
             int[] part1 = Arrays.copyOfRange(arr, i1, j1+1);
