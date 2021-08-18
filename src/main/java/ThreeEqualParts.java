@@ -67,7 +67,6 @@ public class ThreeEqualParts {
 
             if(!Arrays.equals(part1, part2) || !Arrays.equals(part1, part3))
                 return new int[]{-1,-1};
-
             */
             int start = i1, mid = i2,end = i3;
             while(k-- > 0 && arr[start] == arr[mid] && arr[mid] == arr[end]){
