@@ -37,6 +37,8 @@ public class NaryTreePreOrderTraversal {
     };
 
     static class Solution {
+        // Time: O(N)
+        // Space: O(N)
         static List<Integer> result = new ArrayList<>();
         public static List<Integer> preOrder(Node root) {
             if(root == null) return result;
@@ -52,6 +54,8 @@ public class NaryTreePreOrderTraversal {
             }
         }
 
+        // Time: O(N)
+        // Space: O(N)
         List<Integer> result2 = new ArrayList<>();
         public List<Integer> preOrder_II(Node root) {
             if(root == null) return result;
