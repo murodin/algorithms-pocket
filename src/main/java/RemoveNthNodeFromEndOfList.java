@@ -42,6 +42,8 @@ public class RemoveNthNodeFromEndOfList {
     }
 
     static class Solution {
+        // Time: O(N)
+        // Space: O(1)
         public static ListNode removeNthFromEnd(ListNode head, int n) {
             ListNode dummy = new ListNode(0);
             dummy.next = head;
