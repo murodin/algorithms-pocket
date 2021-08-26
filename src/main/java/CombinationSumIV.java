@@ -31,6 +31,8 @@ public class CombinationSumIV {
     }
 
     static class Solution_I {
+        // Time: O(N^target)
+        // Space: O(target)
         public static int combinationSum4(int[] nums, int target) {
             if(target==0){
                 return 1;
@@ -47,6 +49,8 @@ public class CombinationSumIV {
 
     static class Solution_II {
         static int[] dp ;
+        // Time: O(N*target)
+        // Space: O(target)
         public static int combinationSum4(int[] nums, int target) {
             dp=new int[target+1];
             Arrays.fill(dp,-1);
