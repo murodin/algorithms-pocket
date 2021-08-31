@@ -23,6 +23,8 @@ public class NumberOfSubmatricesThatSumToTarget {
     }
 
     static class Solution {
+        // Time: O(M*N^2)
+        // Space: O(N)
         public static int NumSubMatrixSumTarget(int[][] matrix, int target) {
             int m = matrix.length, n = matrix[0].length;
 
