@@ -19,7 +19,9 @@ public class BeautifulArrangementII {
         Explanation: The [1,3,2] has three different positive integers ranging from 1 to 3, and the [2,1] has exactly 2 distinct integers: 1 and 2.
      */
     public static void main(String[] args) {
-        Arrays.asList(Solution.constructArray(3, 1)).forEach(System.out::println);
+        Arrays.stream(Solution.constructArray(9, 4))
+                .boxed()
+                .forEach( e -> System.out.print(" " + e));
     }
 
     static class Solution {
