@@ -56,6 +56,8 @@ public class DeepestLeavesSum {
 
 
     static class Solution_II {
+        // Time: O(N)
+        // Space: O(1)
         static int sum  = 0;
         static int maxDepth = 0;
         public static int deepestLeavesSum(TreeNode root) {
