@@ -49,7 +49,7 @@ public class CombinationSumIV {
 
     static class Solution_II {
         static int[] dp ;
-        // Time: O(N*target)
+        // Time: O(N^target)
         // Space: O(target)
         public static int combinationSum4(int[] nums, int target) {
             dp=new int[target+1];
