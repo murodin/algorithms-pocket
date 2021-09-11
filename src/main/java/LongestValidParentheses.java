@@ -21,7 +21,6 @@ public class LongestValidParentheses {
 
     public static void main(String[] args) {
         String testString = ")()())";
-
         System.out.println("Solution longestValidParentheses: " + Solution.longestValidParentheses(testString));
         System.out.println("Solution longestValidParentheses_II: " + Solution.longestValidParentheses_II(testString));
     }
