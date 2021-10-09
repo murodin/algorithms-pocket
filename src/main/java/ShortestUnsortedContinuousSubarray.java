@@ -16,7 +16,6 @@ public class ShortestUnsortedContinuousSubarray {
         Example 3.
         Input: nums = [1]
         Output: 0
-
      */
 
     public static void main(String[] args) {
