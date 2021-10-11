@@ -55,7 +55,7 @@ public class Integer2EnglishWords {
                 sb.append(LESS_THAN_TWENTY[num]).append(" ");
                 return;
             } else if(num < 100) {
-                sb.append(TENS[num / 10]).append(" ");
+                sb.append(TENS[num/10]).append(" ");
                 helper(sb, num%10);
             } else {
                 sb.append(LESS_THAN_TWENTY[num/100]).append(" Hundred ");
