@@ -22,8 +22,8 @@ public class ArithmeticSlices {
         System.out.println("Solution III:" + Solution_III.numberOfArithmeticSlices(test));
     }
 
-    // Time:
-    // Space:
+    // Time: O(N)
+    // Space: O(N)
     static class Solution_I {
         public static int numberOfArithmeticSlices(int[] A) {
             int[] dp = new int[A.length];
@@ -39,8 +39,8 @@ public class ArithmeticSlices {
         }
     }
 
-    // Time:
-    // Space:
+    // Time: O(N)
+    // Space: O(1)
     static class Solution_II {
         public static int numberOfArithmeticSlices(int[] A) {
             int dp = 0;
@@ -49,15 +49,14 @@ public class ArithmeticSlices {
                 if (A[i] - A[i - 1] == A[i - 1] - A[i - 2]) {
                     dp = 1 + dp;
                     sum += dp;
-                } else
-                    dp = 0;
+                } else dp = 0;
             }
             return sum;
         }
     }
 
-    // Time:
-    // Space:
+    // Time: O(N)
+    // Space: O(1)
     static class Solution_III {
         public static int numberOfArithmeticSlices(int[] A) {
             int count = 0;
