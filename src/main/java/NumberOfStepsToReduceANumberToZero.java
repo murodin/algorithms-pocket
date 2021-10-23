@@ -31,8 +31,8 @@ public class NumberOfStepsToReduceANumberToZero {
         System.out.println("Solution II:" + Solution_II.numberOfSteps(123));
     }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(steps), steps: number divide and subtract
+    // Space: O(1)
     static class Solution_I {
         public static int numberOfSteps (int num) {
             if(num == 0)
@@ -50,8 +50,8 @@ public class NumberOfStepsToReduceANumberToZero {
         }
     }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(steps), steps: number divide and subtract
+    // Space: O(1)
     static class Solution_II {
         public static int numberOfSteps (int num) {
             int count = 0;
