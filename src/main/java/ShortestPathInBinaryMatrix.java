@@ -30,6 +30,8 @@ public class ShortestPathInBinaryMatrix {
         System.out.println("Shortest Path In Binary Matrix: " + Solution.shortestPathBinaryMatrix(testGrid));
     }
 
+    // Time: O(MN); M:rows, N:cols
+    // Space: O(MN)
     static class Solution {
         public static int shortestPathBinaryMatrix(int[][] grid) {
             if(grid[0][0] == 1) return -1;
@@ -38,7 +40,7 @@ public class ShortestPathInBinaryMatrix {
 
             Queue<int[]> q = new LinkedList<>();
             q.add(new int[]{0,0,1});
-            grid[0][0] =1;
+            grid[0][0] = 1;
 
             int[][] dir = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
             while(!q.isEmpty()) {
