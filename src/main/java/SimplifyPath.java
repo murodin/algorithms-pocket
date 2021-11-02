@@ -1,3 +1,5 @@
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Stack;
 
 public class SimplifyPath {
@@ -32,14 +34,16 @@ public class SimplifyPath {
      */
 
     public static void main(String[] args) {
-        System.out.println("Simplify Path: " + Solution.simplifyPath("/home/"));
+        System.out.println("Simplify Path: " + Solution_I.simplifyPath("/home/"));
+        System.out.println("Simplify Path: " + Solution_II.simplifyPath("/home/"));
     }
 
     // Time: O(N)
     // Space: O(N)
-    static class Solution {
+    static class Solution_I {
         public static String simplifyPath(String path) {
             Stack<String> stack = new Stack<>();
+            Deque<String> deque = new LinkedList<>();
             StringBuilder sb = new StringBuilder();
             String[] p = path.split("/");
 
@@ -52,6 +56,29 @@ public class SimplifyPath {
 
             while (!stack.isEmpty()) {
                 sb.insert(0, stack.pop()).insert(0, "/");
+            }
+
+            return sb.toString();
+        }
+    }
+
+    // Time: O(N)
+    // Space: O(N)
+    static class Solution_II {
+        public static String simplifyPath(String path) {
+            Deque<String> deque = new LinkedList<>();
+            StringBuilder sb = new StringBuilder();
+            String[] p = path.split("/");
+
+            for(String pp: p) {
+                if(!deque.isEmpty() && pp.equals("..")) deque.poll();
+                else if(!pp.equals("") && !pp.equals(".") &&  !pp.equals("..")) deque.push(pp);
+            }
+
+            if(deque.isEmpty()) return "/";
+
+            while (!deque.isEmpty()) {
+                sb.append("/").append(deque.pollLast());
             }
 
             return sb.toString();
