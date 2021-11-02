@@ -26,8 +26,8 @@ public class ShortestDistance2ACharacter {
         System.out.println("Shortest Distance: " + Arrays.toString(Solution.shortestToChar("aaab", 'b')));
     }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(N)
+    // Space: O(N)
     static class Solution {
         public static int[] shortestToChar(String s, char c) {
             List<Integer> l = new ArrayList<>();
