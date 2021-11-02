@@ -36,8 +36,8 @@ public class BinaryTreeRightSideView {
         }
      }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(N)
+    // Space: O(N)
     static class Solution_I {
         public static List<Integer> rightSideView(TreeNode root) {
             List<Integer> result=new ArrayList<>();
@@ -70,8 +70,8 @@ public class BinaryTreeRightSideView {
         }
     }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(N)
+    // Space: O(N)
     static class Solution_II {
         static List<Integer> result=new ArrayList<>();
         public static List<Integer> rightSideView(TreeNode root) {
