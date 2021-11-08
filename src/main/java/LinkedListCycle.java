@@ -40,8 +40,8 @@ public class LinkedListCycle {
          }
      }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(N)
+    // Space: O(N)
     static class Solution_I {
         public static boolean hasCycle(ListNode head) {
             Set<ListNode> nodes=new HashSet<>();
@@ -58,8 +58,8 @@ public class LinkedListCycle {
         }
     }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(N)
+    // Space: O(1)
     static class Solution_II {
         public static boolean hasCycle(ListNode head) {
             if(head==null) return false;
