@@ -28,8 +28,8 @@ public class NumberOfOneBits {
         System.out.println("Solution III: " + Solution_III.hammingWeight(3));
     }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(1)
+    // Space: O(1)
     static class Solution_I {
         // you need to treat n as an unsigned value
         public static int hammingWeight(int n) {
@@ -42,8 +42,8 @@ public class NumberOfOneBits {
         }
     }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(1)
+    // Space: O(1)
     static class Solution_II {
         // you need to treat n as an unsigned value
         public static int hammingWeight(int n) {
@@ -56,8 +56,8 @@ public class NumberOfOneBits {
         }
     }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(N)
+    // Space: O(1)
     static class Solution_III  {
         // you need to treat n as an unsigned value
         public static int hammingWeight(int n) {
