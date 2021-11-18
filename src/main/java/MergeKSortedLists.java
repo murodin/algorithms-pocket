@@ -69,7 +69,7 @@ public class MergeKSortedLists {
     }
 
     // Time: O(NK)
-    // Space: O(1)
+    // Space: O(N)
     static class Solution_II {
         public static ListNode mergeKLists(ListNode[] lists) {
             if(lists==null || lists.length==0) return null;
