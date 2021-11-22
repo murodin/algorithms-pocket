@@ -43,8 +43,8 @@ public class DetermineIfTwoStringsAreClose {
         System.out.println("Solution II: " + Solution_II.closeStrings("abc", "bca"));
     }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(N)
+    // Space: O(1)
     static class Solution_I {
         public static boolean closeStrings(String word1, String word2) {
             if(word1.length()!=word2.length()) return false;
@@ -93,8 +93,8 @@ public class DetermineIfTwoStringsAreClose {
         }
     }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(NLogN ~ N)
+    // Space: O(1)
     static class Solution_II {
         public static boolean closeStrings(String word1, String word2) {
             if(word1.length()!=word2.length()) return false;
