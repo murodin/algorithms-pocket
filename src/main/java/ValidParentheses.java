@@ -33,8 +33,8 @@ public class ValidParentheses {
         System.out.println("Solution II: " + Solution_II.isValid(testStr));
     }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(N)
+    // Space: O(N)
     static class Solution_I {
         static Map<Character, Character> map;
         public static boolean isValid(String s) {
@@ -57,8 +57,8 @@ public class ValidParentheses {
         }
     }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(N^2)
+    // Space: O(1)
     static class Solution_II {
         static Map<Character,Character> map=new HashMap<>();
         public static boolean isValid(String s) {
