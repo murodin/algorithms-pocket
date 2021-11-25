@@ -62,7 +62,6 @@ public class ValidParentheses {
     static class Solution_II {
         static Map<Character,Character> map=new HashMap<>();
         public static boolean isValid(String s) {
-
             map.put('}','{');
             map.put(')','(');
             map.put(']','[');
@@ -75,12 +74,10 @@ public class ValidParentheses {
                 if(map.containsValue(c)){
                     //st.push(c);
                     top=i;
-                }
-                else{
+                } else{
                     if(top==-1 || map.get(c)!=s.charAt(top)){
                         return false;
-                    }
-                    else{
+                    } else{
                         top=getTop(s,top-1);
                     }
                 }
@@ -94,11 +91,10 @@ public class ValidParentheses {
 
             while(index>=0){
                 char ch=s.charAt(index);
-                if(map.containsKey(ch))// ch = is closing bracket
-                {
+                // ch = is closing bracket
+                if(map.containsKey(ch)) {
                     right++;
-                }
-                else{
+                } else{
                     right--;
                 }
 

@@ -23,8 +23,8 @@ public class FindTheMostCompetitiveSubsequence {
         System.out.println("Solution II: " + Solution_II.mostCompetitive(new int[]{2,4,3,3,5,4,9,6}, 4 ));
     }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(N)
+    // Space: O(K)
     static class Solution_I {
         public static int[] mostCompetitive(int[] nums, int k) {
             Stack<Integer> st=new Stack<>();
@@ -50,8 +50,8 @@ public class FindTheMostCompetitiveSubsequence {
         }
     }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(N)
+    // Space: O(K)
     static class Solution_II {
         public static int[] mostCompetitive(int[] nums, int k) {
             int[] result= new int[k];
