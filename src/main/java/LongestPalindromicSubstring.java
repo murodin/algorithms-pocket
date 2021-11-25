@@ -74,6 +74,8 @@ public class LongestPalindromicSubstring {
         }
     }
 
+    // Time: O(N^2)
+    // Space: O(1)
     static class Solution_II {
         public static String longestPalindrome(String s) {
             int start = 0, end = 0;
