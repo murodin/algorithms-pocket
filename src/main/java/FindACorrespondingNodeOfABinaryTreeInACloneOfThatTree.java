@@ -41,7 +41,9 @@ public class FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree {
          TreeNode(int x) { val = x; }
      }
 
-    static class Solution {
+     // Time: O(N)
+     // Space: O(H)
+     static class Solution {
         static TreeNode target, res;
         public final TreeNode getTargetCopy(final TreeNode original, final TreeNode cloned, final TreeNode target) {
             Solution.target = target;
@@ -58,5 +60,5 @@ public class FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree {
                 inorder(orig.right, cloned.right);
             }
         }
-    }
+     }
 }
