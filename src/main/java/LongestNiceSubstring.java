@@ -30,6 +30,7 @@ public class LongestNiceSubstring {
     }
 
     static class Solution {
+
         public static String longestNiceSubstring(String s) {
             var sub = longestNiceSubstring(s, 0, s.length());
             return s.substring(sub[0], sub[1]);
