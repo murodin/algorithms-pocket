@@ -71,7 +71,7 @@ public class LargestRectangleInHistogram {
         }
     }
 
-    // Time: O(N) average
+    // Time: O(N)
     // Space: O(N)
     static class Solution_II {
         public static int largestRectangleArea(int[] heights) {
