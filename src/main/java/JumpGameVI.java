@@ -48,7 +48,6 @@ public class JumpGameVI {
 
             int n = nums.length;
             int max = nums[0];
-
             // index --- maxSum
             PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> b[1]-a[1]);
             pq.offer(new int[]{0,nums[0]});
