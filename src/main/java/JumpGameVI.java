@@ -82,6 +82,7 @@ public class JumpGameVI {
             for(int i=1;i<n;i++){
 
                 nums[i] = nums[i] + nums[dq.peekFirst()];
+                System.out.println("num:" + nums[i]);
 
                 while(!dq.isEmpty() && nums[i]>=nums[dq.peekLast()]){
                     dq.pollLast();
