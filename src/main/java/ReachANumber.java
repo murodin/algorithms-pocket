@@ -30,7 +30,7 @@ public class ReachANumber {
         System.out.println("Reach Number: " + Solution.reachNumber(2));
     }
 
-    // Time: O(Steps)
+    // Time: O(Steps) = Sqrt(Steps)
     // Space: O(1)
     static class Solution {
         public static int reachNumber(int target) {
