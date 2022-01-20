@@ -42,6 +42,7 @@ public class DecodeWays {
         System.out.println("Solution I: " + Solution_I.numDecodings(s));
         System.out.println("Solution II: " + Solution_II.numDecodings(s));
         System.out.println("Solution III: " + Solution_III.numDecodings(s));
+        System.out.println("Solution IV: " + Solution_IV.numDecodings(s));
     }
 
     // Time: O(2^N)
@@ -123,6 +124,36 @@ public class DecodeWays {
                 }
             }
             return dp[s.length()];
+        }
+    }
+
+    // Time: O(N)
+    // Space: O(N)
+    static class Solution_IV {
+        public static int numDecodings(String s) {
+            if(s==null || s.length() == 0) return 0;
+            if(s.charAt(0) == '0') return 0;
+
+            int dp1 = 1;
+            int dp2 = s.charAt(0) == '0'? 0:1;
+
+            for(int i=2; i <= s.length(); i++) {
+                int lenOne = Integer.parseInt(s.substring(i-1, i));
+                int lenTwo = Integer.parseInt(s.substring(i-2, i));
+
+                int dp = 0;
+                if(lenOne >= 1 && lenOne <= 9) {
+                    dp += dp1;
+                }
+
+                if(lenTwo >= 10 && lenTwo <= 26) {
+                    dp += dp2;
+                }
+
+                dp2 = dp1;
+                dp1 = dp;
+            }
+            return dp1;
         }
     }
 }
