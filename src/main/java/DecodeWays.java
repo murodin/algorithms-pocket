@@ -102,7 +102,7 @@ public class DecodeWays {
     }
 
     // Time: O(N)
-    // Space: O(N)
+    // Space: O(1)
     static class Solution_III {
         public static int numDecodings(String s) {
             if(s==null || s.length() == 0) return 0;
