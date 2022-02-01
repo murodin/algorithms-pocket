@@ -30,6 +30,8 @@ public class IncreasingTripletSubsequence {
         System.out.println("Test 4 -> Increasing Triplet Subsequence: " + Solution.increasingTriplet(new int[]{2,1}));
     }
 
+    // Time: O(N)
+    // Space: O(1)
     static class Solution {
         public static boolean increasingTriplet(int[] nums) {
             if(nums.length < 3) return false;
