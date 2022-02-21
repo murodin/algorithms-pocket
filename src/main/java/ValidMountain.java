@@ -35,7 +35,6 @@ public class ValidMountain {
         public static boolean validMountainArray(int[] arr) {
             if(arr.length < 3) return  false;
             int i = 0;
-
             for(; i<arr.length-1; i++) {
                 if(arr[i] > arr[i+1]) {
                     i++;
