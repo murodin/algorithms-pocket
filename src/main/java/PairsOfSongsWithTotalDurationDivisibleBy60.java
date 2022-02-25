@@ -26,15 +26,15 @@ public class PairsOfSongsWithTotalDurationDivisibleBy60 {
 
     public static void main(String[] args) {
         int[] time1 = {30,20,150,100,40};
-        System.out.println("Solution: " + Solution.numPairsDivisibleBy60(time1));
+        System.out.println("Solution: " + Solution_I.numPairsDivisibleBy60(time1));
 
         int[] time2 = {60,60,60};
-        System.out.println("Solution: " + Solution.numPairsDivisibleBy60(time2));
+        System.out.println("Solution: " + Solution_II.numPairsDivisibleBy60(time2));
     }
 
     // Time: O(N)
     // Space: O(1)
-    static class Solution {
+    static class Solution_I {
         public static int numPairsDivisibleBy60(int[] time) {
             int[] count = new int[60];
 
@@ -52,6 +52,22 @@ public class PairsOfSongsWithTotalDurationDivisibleBy60 {
 
         static int sumOfN(int n) {
             return n*(n+1)/2;
+        }
+    }
+
+    // Time: O(N)
+    // Space: O(1)
+    static class Solution_II {
+        public static int numPairsDivisibleBy60(int[] time) {
+            int ans = 0;
+            int[] visited = new int[60];
+            visited[time[0] % 60] = 1;
+            for(int j = 1; j < time.length; j++){
+                int v = time[j] % 60;
+                ans += visited[(60-v) % 60];
+                visited[v]++;
+            }
+            return ans;
         }
     }
 }
