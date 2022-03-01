@@ -24,8 +24,8 @@ public class CanPlaceFlowers {
         System.out.println("Can place flowers: " + Solution.canPlaceFlowers(flowers, 1));
     }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(N)
+    // Space: O(1)
     static class Solution {
         public static boolean canPlaceFlowers(int[] flowerbed, int n) {
             int count = 0;
