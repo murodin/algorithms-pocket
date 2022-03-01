@@ -28,8 +28,8 @@ public class TheKthFactorOfN {
         System.out.println("Solution 4th of 7 factors: " + Solution.kthFactor(4, 4));
     }
 
-    // Time: O()
-    // Space: O()
+    // Time: O(N)
+    // Space: O(1)
     static class Solution {
         public static int kthFactor(int n, int k) {
             int count = 0;
