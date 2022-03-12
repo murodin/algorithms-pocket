@@ -2,7 +2,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class UniqueMorseCodeWords {
-
     /*
         International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows:
         'a' maps to ".-",
