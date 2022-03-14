@@ -52,7 +52,6 @@ public class DecodeString {
                 } else if(c == '[') {
                     stringBuilderStack.push(sb);
                     sb = new StringBuilder();
-
                     numStack.push(num);
                     num = 0;
                 } else if(c == ']') {
