@@ -118,4 +118,19 @@ public class PopulatingNextRightPointersInEachNode {
             return root;
         }
     }
+
+    // Time: O(N)
+    // Space: O(1)
+    static class Solution_III {
+        public static Node connect(Node root) {
+            if(root == null || root.right == null || root.left == null) return root;
+            root.left.next = root.right;
+            if(root.next != null) {
+                root.right.next = root.left.next;
+            }
+            connect(root.right);
+            connect(root.left);
+            return root;
+        }
+    }
 }
