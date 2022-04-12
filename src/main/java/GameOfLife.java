@@ -51,13 +51,12 @@ public class GameOfLife {
                 {1,1,1},
                 {0,0,0}
         };
-        Solution_I.gameOfLife(boards);
 
+        Solution_I.gameOfLife(boards);
         Arrays.stream(boards).forEach(board ->
                 System.out.println("Game of the Life - I: " + Arrays.toString(board)));
 
         Solution_II.gameOfLife(boards);
-
         Arrays.stream(boards).forEach(board ->
                 System.out.println("Game of the Life - II: " + Arrays.toString(board)));
     }
