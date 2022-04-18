@@ -9,7 +9,6 @@ public class KthSmallestElementInABST {
         Input: root = [5,3,6,2,4,null,null,1], k = 3
         Output: 3
 
-
         Constraints:
 
         The number of nodes in the tree is n.
