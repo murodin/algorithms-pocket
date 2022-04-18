@@ -56,7 +56,7 @@ public class MergeKSortedArrays {
         }
     }
 
-    // Time: O(K), K where total Array size in Array
+    // Time: O(K*Max(Arr[i])), K where total Array size in Array
     // Space: O(1)
     static class Solution_II {
         static public int[] mergeSorted(int[][] arr) {
