@@ -28,12 +28,13 @@ public class BackspaceStringCompare {
      */
 
     public static void main(String[] args) {
-        System.out.println("Solution: " + Solution.backspaceCompare("ab#c", "ad#c"));
+        System.out.println("Solution: " + Solution_I.backspaceCompare("ab#c", "ad#c"));
+        System.out.println("Solution: " + Solution_II.backspaceCompare("ab#c", "ad#c"));
     }
 
     // Time: (M+N), where M and N length of strings
     // Space: O(1)
-    static class Solution {
+    static class Solution_I {
         private static int move(String s, int cur) {
             int cnt = 0;
             while(cur >= 0) {
@@ -61,6 +62,24 @@ public class BackspaceStringCompare {
                     return false;
             }
             return i == j;
+        }
+    }
+
+    // Time: (M+N), where M and N length of strings
+    // Space: O(1)
+    static class Solution_II {
+        public static boolean backspaceCompare(String s, String t) {
+            return helper(s).equals(helper(t));
+        }
+
+        public static String helper(String str) {
+            for(int i = 0; i < str.length(); i++) {
+                if(str.charAt(i) == '#') {
+                    str = str.substring(0, Math.max(0, i-1)) + str.substring(i+1);
+                    i = Math.max(-1, i-2);
+                }
+            }
+            return str;
         }
     }
 }
