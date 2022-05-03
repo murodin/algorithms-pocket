@@ -106,7 +106,6 @@ public class MaximalRectangle {
         }
 
         public static int findLargestRect(int[] heights) {
-
             Stack<Integer>stack=new Stack<Integer>();
             int maxarea=Integer.MIN_VALUE;
             int area=-1,top=-1;
