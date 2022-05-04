@@ -27,6 +27,7 @@ public class MaxNumberOfKSumPairs {
     public static void main(String[] args) {
         System.out.println("Solution I: " + Solution_I.maxOperations(new int[]{3,1,3,4,3}, 6));
         System.out.println("Solution II: " + Solution_II.maxOperations(new int[]{3,1,3,4,3}, 6));
+        System.out.println("Solution III: " + Solution_III.maxOperations(new int[]{3,1,3,4,3}, 6));
     }
 
     // Time: O(N)
@@ -83,6 +84,27 @@ public class MaxNumberOfKSumPairs {
             }
 
             return count;
+        }
+    }
+
+    // Time: O(NLogN)
+    // Space: O(1)
+    static class Solution_III {
+        public static int maxOperations(int[] nums, int k) {
+            Arrays.sort(nums);
+            int low = 0, high = nums.length - 1, minOperations = 0;
+
+            while(low < high){
+                if(nums[low] + nums[high] == k){
+                    low++;
+                    high--;
+                    minOperations++;
+                }
+                else if(nums[low] + nums[high] > k) high--;
+                else low++;
+            }
+
+            return minOperations;
         }
     }
 }
