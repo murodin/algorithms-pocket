@@ -32,6 +32,7 @@ public class Pattern132 {
     public static void main(String[] args) {
         int[] nums = {3,1,4,2};
         System.out.println("Solution I: " + Solution_I.find132pattern(nums));
+        System.out.println("Solution III: " + Solution_III.find132pattern(nums));
         System.out.println("Solution II: " + Solution_II.find132pattern(nums));
     }
 
@@ -59,8 +60,24 @@ public class Pattern132 {
     }
 
     // Time: O(N)
-    // Space: O(N)
+    // Space: O(1)
     static class Solution_II {
+        public static boolean find132pattern(int[] nums) {
+            int n = nums.length, top = n, third = Integer.MIN_VALUE;
+
+            for (int i = n - 1; i >= 0; i--) {
+                if (nums[i] < third) return true;
+                while (top < n && nums[i] > nums[top]) third = nums[top++];
+                nums[--top] = nums[i];
+            }
+
+            return false;
+        }
+    }
+
+    // Time: O(N)
+    // Space: O(N)
+    static class Solution_III {
         public static boolean find132pattern(int[] nums) {
             int len = nums.length;
             if (len < 3) {
