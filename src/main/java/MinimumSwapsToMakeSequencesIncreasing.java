@@ -53,9 +53,7 @@ public class MinimumSwapsToMakeSequencesIncreasing {
                     dp[i][0] = Math.min(dp[i-1][1], dp[i][0]);
                     dp[i][1] = Math.min(dp[i-1][0]+1, dp[i][1]);
                 }
-                // System.out.print(dp[i][0]+","+dp[i][1]+" ");
             }
-            //System.out.println();
             return Math.min(dp[nums1.length-1][0], dp[nums1.length-1][1]);
         }
     }
