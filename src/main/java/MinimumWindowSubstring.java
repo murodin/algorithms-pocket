@@ -93,10 +93,8 @@ public class MinimumWindowSubstring {
                     freq.put(s.charAt(left), freq.get(s.charAt(left)) + 1);
                     if (freq.get(s.charAt(left)) > 0) count++;
                     left++;
-
                 }
                 right++;
-
             }
             return len == Integer.MAX_VALUE ? "" : s.substring(start, start + len);
 
