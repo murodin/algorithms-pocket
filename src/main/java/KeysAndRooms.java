@@ -31,12 +31,13 @@ public class KeysAndRooms {
                 List.of(2),
                 List.of(0)
         );
-        System.out.println("Can Visit All: " + Solution.canVisitAllRooms(testRooms));
+        System.out.println("Can Visit All-I: " + Solution_I.canVisitAllRooms(testRooms));
+        System.out.println("Can Visit All-II: " + Solution_II.canVisitAllRooms(testRooms));
     }
 
     // Time: O(rooms + keys)
     // Space: O(rooms)
-    static class Solution {
+    static class Solution_I {
         static boolean[] visited;
         public static boolean canVisitAllRooms(List<List<Integer>> rooms) {
             visited = new boolean[rooms.size()];
@@ -51,6 +52,30 @@ public class KeysAndRooms {
                 if(!visited[i]){
                     visited[i] = true;
                     dfs(rooms, i);
+                }
+            }
+        }
+    }
+
+    // Time: O(rooms + keys)
+    // Space: O(rooms)
+    static class Solution_II {
+        static int[] visited;
+        public static boolean canVisitAllRooms(List<List<Integer>> rooms) {
+            visited = new int[rooms.size()];
+            dfs(0,rooms);
+            for(int i : visited){
+                if(i == 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+        public static void dfs(int x, List<List<Integer>> rooms){
+            visited[x] = 1;
+            for(int i = 0; i < rooms.get(x).size(); i++){
+                if(visited[rooms.get(x).get(i)] == 0){
+                    dfs(rooms.get(x).get(i),rooms);
                 }
             }
         }
