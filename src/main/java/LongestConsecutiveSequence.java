@@ -24,8 +24,8 @@ public class LongestConsecutiveSequence {
         System.out.println("Solution: " + Solution.longestConsecutive(new int[] {100,4,200,1,3,2}));
     }
 
-    // Time:
-    // Space:
+    // Time: O(NLogN)
+    // Space: O(1)
     static class Solution {
         public static int longestConsecutive(int[] nums) {
             if(nums.length < 2)
