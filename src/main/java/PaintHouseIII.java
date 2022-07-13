@@ -47,8 +47,8 @@ public class PaintHouseIII {
         System.out.println("Solution: " + Solution.minCost(houses, cost, m, n, target));
     }
 
-    // Time:
-    // Space:
+    // Time: O(N)
+    // Space: O(1)
     static class Solution {
         private static Integer[][][] cache = new Integer[101][21][101]; // memorization
         private static int MAX = (int)1e8;
