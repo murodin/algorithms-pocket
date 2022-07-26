@@ -59,8 +59,8 @@ public class PlatesBetweenCandles {
 
             int ind = -1;
             int cnt = 0;
-            for(int i=0;i<n;i++) {
-                if(s.charAt(i)=='|') {
+            for(int i=0; i<n; i++) {
+                if(s.charAt(i) == '|') {
                     ind = i;
                     cnt++;
                 }
@@ -69,22 +69,21 @@ public class PlatesBetweenCandles {
             }
 
             ind = -1;
-            for(int i=n-1;i>=0;i--) {
+            for(int i=n-1; i>=0; i--) {
                 if(s.charAt(i)=='|')
                     ind = i;
                 postCandleIndex[i] = ind;
             }
-
+            
             int count = 0;
             for(int[] query:queries) {
                 int l = postCandleIndex[query[0]];
                 int r = preCandleIndex[query[1]];
-                if(l==-1||r==-1||l>=r) {
+                if(l==-1 || r==-1 || l>=r) {
                     ans[count] = 0;
                 }else{
                     ans[count] = r - l - (numCandle[r] - numCandle[l]);
                 }
-
                 count++;
             }
             return ans;
