@@ -33,7 +33,7 @@ public class PoorPigs {
         System.out.println("Solution: " + Solution.poorPigs(4, 15, 30));
     }
 
-    // Time: O(N)
+    // Time: O(LogN)
     // Space: O(1)
     static class Solution {
         public static int poorPigs(int buckets, int mi, int mt) {
