@@ -69,8 +69,8 @@ public class VerticalOrderTraversalOfABinaryTree {
          }
     }
 
-    // Time:
-    // Space:
+    // Time: O(NLogN)
+    // Space: (N)
     static class Solution {
         public List<List<Integer>> verticalTraversal(TreeNode root) {
             // map of vertical level(v),  horizontal level(h) ,all nodes at (v,h)
