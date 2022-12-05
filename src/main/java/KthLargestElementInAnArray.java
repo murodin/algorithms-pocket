@@ -55,22 +55,18 @@ public class KthLargestElementInAnArray {
         }
 
         static int quickselect(int[] nums,int left,int right,int k){
-            int pivot=left;
-
-            for(int i=left;i<right;i++){
-                if(nums[i]<=nums[right]){
-                    swap(nums,pivot++,i);
+            int pivot = left;
+            for(int i=left; i<right; i++){
+                if(nums[i] <= nums[right]){
+                    swap(nums, pivot++, i);
                 }
             }
+            swap(nums, pivot, right);
+            int count = right-pivot+1;
 
-            swap(nums,pivot,right);
-
-            int count=right-pivot+1;
-
-            if(count==k){
+            if(count == k){
                 return nums[pivot];
-            }
-            else if(count>k){
+            } else if(count > k) {
                 return quickselect(nums,pivot+1,right,k);
             }
 
@@ -78,9 +74,9 @@ public class KthLargestElementInAnArray {
         }
 
         static void swap(int[] nums,int l,int r){
-            int temp=nums[l];
-            nums[l]=nums[r];
-            nums[r]=temp;
+            int temp = nums[l];
+            nums[l] = nums[r];
+            nums[r] = temp;
         }
     }
 }
