@@ -72,7 +72,6 @@ public class ReconstructItinerary {
                 dfs(temp);//recursing down
             }
             res.addFirst(src);//adding the Airport while backtracking//least in-dependency as far as possible
-            return;
         }
     }
 }
