@@ -27,7 +27,10 @@ public class PathCrossing {
         path[i] is either 'N', 'S', 'E', or 'W'.
      */
     public static void main(String[] args) {
+        System.out.println(Solution.isPathCrossing("NE"));
+
         System.out.println("Solution: " + Solution.isPathCrossing("NESWW"));
+
     }
 
     // Time: O(N)
